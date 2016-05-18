@@ -1,0 +1,88 @@
+.mybtn{
+    margin: 1em auto;
+    border: 1px solid #0894EC;
+    border-radius: 5em;
+    text-align: center;
+    color:#0894EC;
+    height: 1.5em;
+    line-height: 1.5em;
+    width: 90%;
+    font-family: 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:#3D4145
+}
+.mybtn1{
+    margin: 1em auto;
+    border: 1px solid #6D6D72;
+    border-radius: 5em;
+    text-align: center;
+    color:#3D4145;
+    height: 1.5em;
+    line-height: 1.5em;
+    width: 90%;
+    font-family: 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+.mybtn2{
+    margin: 1em auto;
+    border: 1px solid #FF6600;
+    border-radius: 0.3em;
+    text-align: center;
+    color:#FF6666;
+    height: 1.5em;
+    line-height: 1.8em;
+    width: 90%;
+    font-family: 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+.mybtn3{
+    margin: 1em auto;
+    border: 1px solid #4CD964;
+    border-radius: 0.7em;
+    text-align: center;
+    color:#4CD970;
+    height: 2em;
+    line-height: 2em;
+    width: 90%;
+    font-family: 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+.mybtn4{
+    margin: 1em auto;
+    border: 1px solid #0894EC;
+    border-radius: 0.7em;
+    text-align: center;
+    color:#0894EC;
+    height: 3em;
+    line-height: 3em;
+    width: 90%;
+    font-family: 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+.mybtn5{
+    margin: 1em auto;
+    border: 1px solid #0894EC;
+    border-radius: 0.7em;
+    text-align: center;
+    color:#0894EC;
+    height: 3em;
+    line-height: 3em;
+    width: 90%;
+    font-family: 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+.mybtn6{
+    margin: 1em auto;
+    border: 1px solid black;
+    border-radius: 0.1em;
+    text-align: center;
+    color:black;
+    height: 1.4em;
+    line-height: 1.4em;
+    width: 90%;
+    font-family: 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}

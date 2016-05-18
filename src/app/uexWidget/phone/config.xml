@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<widget appId="11500613" channelCode="0000" height="480" pid="" sreensize="4.5" version="00.00.0000" viewmode="application" widgetId="" width="320">
+	
+	<name>test</name>
+	<description/>
+	<author email=""> </author>
+	<icon src="icon.png"/>
+	<license href=""/>
+	<content encoding="utf-8" src="index.html"/>
+	<updateurl/>
+	<logserverip/> 
+	<showmyspace>false</showmyspace>
+	<obfuscation>true</obfuscation>
+	<bgcolor>#fefefe</bgcolor>
+	<orientation>15</orientation>
+	<config desc="whiteList" type="AUTHORITY">
+    <permission platform="iOS" info="urlSchemeWhiteList">
+         <string>mqq</string>
+    </permission>
+</config>
+<debug/>
+<partobfuscation>false</partobfuscation>
+<webapp/>
+</widget>

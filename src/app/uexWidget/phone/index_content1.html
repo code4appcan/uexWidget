@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="css/my.css"/>
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="mybtn" id="btn1">
+            startWidget
+        </div>
+        <div class="mybtn" id="btn7">
+            startWidget子应用
+        </div>
+        <div class="mybtn1" id="btn2">
+            finishWidget
+        </div>
+        <div class="mybtn2" id="btn3">
+            removeWidget
+        </div>
+        <div class="mybtn3" id="btn4">
+            checkUpdate
+        </div>
+        <div class="mybtn4" id="btn5">
+            loadApp
+        </div>
+        <div class="mybtn6" id="btn6">
+            isAppInstalled
+        </div>
+        <div class="mybtn5" id="btn8">
+            onSuspend
+        </div>
+        <div class="mybtn4" id="btn9">
+            onResume
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+    </body>
+    <script>
+        window.uexOnload = function() {
+            uexWidget.cbGetOpenerInfo = function(opId, dataType, data) {
+                alert('opid:' + opId + ',dataType:' + dataType + ',data:' + data);
+            }
+            uexWidget.cbIsAppInstalled = function(info) {
+                var result = JSON.parse(info);
+                if (result.installed == 0) {
+                    alert('installed');
+                } else {
+                    alert('not installed');
+                }
+            }
+            uexWidget.onSuspend = function() {
+                alert("程序挂起");
+            }
+            uexWidget.onResume = function() {
+                alert("程序恢复");
+            }
+        }
+        appcan.button("#btn7", "ani-act", function() {
+            uexWidget.startWidget("123456789", "2", "", "open a widget", 500)
+            uexWidget.cbStartWidget = function(opId, dataType, data) {
+                alert('opid:' + opId + ',dataType:' + dataType + ',data:' + data);
+            }
+        })
+        appcan.button(".mybtn", "ani-act", function() {
+            uexWidget.startWidget("11495624", "2", "", "open a widget", 500)
+            uexWidget.cbStartWidget = function(opId, dataType, data) {
+                alert('opid:' + opId + ',dataType:' + dataType + ',data:' + data);
+            }
+        })
+        appcan.button(".mybtn1", "ani-act", function() {
+            uexWidget.finishWidget("finish a widget", "", 0)
+        })
+        appcan.button(".mybtn2", "ani-act", function() {
+            uexWidget.removeWidget("11495624");
+            uexWidget.cbRemoveWidget = function(opId, dataType, data) {
+                alert('opid:' + opId + ',dataType:' + dataType + ',data:' + data);
+            }
+        })
+        appcan.button(".mybtn3", "ani-act", function() {
+            uexWidget.checkUpdate();
+            uexWidget.cbCheckUpdate = function(opId, dataType, data) {
+                alert('opid:' + opId + ',dataType:' + dataType + ',data:' + data);
+            }
+        })
+        appcan.button(".mybtn4", "ani-act", function() {
+            var appInfo = "http://www.taobao.com";
+            uexWidget.loadApp(appInfo);
+        })
+        appcan.button("#btn8", "ani-act", function() {
+            uexWidget.onSuspend = function() {
+                alert("程序挂起");
+            }
+        })
+        appcan.button("#btn9", "ani-act", function() {
+            uexWidget.onResume = function() {
+                alert("程序恢复");
+            }
+        })
+        appcan.button("#btn6", "ani-act", function() {
+            var param1 = {
+                appData : 'mqq://'
+            };
+            var data1 = JSON.stringify(param1);
+            uexWidget.isAppInstalled(data1);
+        })
+    </script>
+</html>
